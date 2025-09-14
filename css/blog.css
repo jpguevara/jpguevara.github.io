@@ -1,0 +1,106 @@
+:root {
+  --pico-font-family: "Poppins", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 40rem;
+}
+
+.profile {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.profile a {
+  text-decoration: none;
+}
+
+.profile img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 0.2rem;
+}
+
+.profile h1 {
+  font-size: medium;
+  font-weight: 500;
+}
+
+.profile p {
+  font-weight: 300;
+}
+
+.article-list {
+}
+
+.article-list article {
+  padding: 2rem;
+  border: 1px solid white;
+  position: relative;
+}
+
+.article-list article > header {
+  border: 0;
+  background-color: inherit;
+  --pico-spacing: 0.4rem;
+  --pico-block-spacing-vertical: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.article-list article > header > h2 {
+  --pico-font-size: 1.4rem;
+  --pico-typography-spacing-vertical: 0.4rem;
+  margin-top: var(--pico-typography-spacing-vertical);
+}
+
+.article-list article > header > small {
+  font-size: small;
+}
+
+.article-list article > footer {
+  border: 0;
+  background-color: inherit;
+}
+
+.post-view {
+  margin-bottom: 0;
+}
+.post-view > article {
+  background: none;
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  /* font-size: large; */
+}
+.post-view > article > header {
+  background: none;
+  border: none;
+  text-align: center;
+  padding-bottom: 0;
+}
+
+.post footer {
+  text-align: center;
+  font-weight: 300;
+  font-size: medium;
+  max-width: 40rem;
+}
+.post footer > p {
+  font-weight: 300;
+  font-size: medium;
+}
+
+.post footer > h4 {
+  font-size: medium;
+  font-weight: 500;
+  text-transform: uppercase;
+}
