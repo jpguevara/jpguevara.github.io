@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>First Round of Automation</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/pico.min.css" />
+    <link rel="stylesheet" href="../css/blog.css" />
+    
+  </head>
+  <body class="post">
+    <main class="container">
+      <section class="profile">
+        <header>
+          <a href="../index.html">
+            <img src="../images/profile.jpeg" alt="Profile picture" />
+            <h1>Juan Burciaga</h1>
+          </a>
+        </header>
+      </section>
+
+      <section class="post-view">
+        <article>
+          <header style="align-items: center">
+            <small>2025-09-15</small>
+            <h2>First Round of Automation</h2>
+          </header>
+
+          <!-- Converted Markdown goes here -->
+          <p>While creating the first post, <a
+          href="my-blog-from-scratch.html"
+          title="My Blog from Scratch">My Blog from Scratch</a>,<br />
+          I quickly realized how tedious it is to write HTML by hand. I
+          had to be careful with the paragraph tags, escape characters,
+          copy/paste all the common sections of the page, and create
+          links between the index page and the post.</p>
+          <p>Here’s a snapshot of the first structure:</p>
+          <pre><code>.
+├── index.html
+├── css/
+│   └── blog.css
+├── images/
+│   └── profile.jpeg
+└── posts/
+    └── my-blog-from-scratch.html</code></pre>
+          <p>To make my life easier, I implemented some changes to
+          generate HTML files from Markdown using <a
+          href="https://pandoc.org/">Pandoc</a>. Together with a few
+          simple bash scripts to avoid retyping, this gave me the first
+          round of automated post generation.</p>
+          <p>This article itself is written as a Markdown file and is
+          generated to HTML with the command:</p>
+          <div class="sourceCode" id="cb2"><pre
+          class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> articles</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">./build.sh</span> first-round-of-automation.md</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># that will run the pandoc command:</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># pandoc &quot;$INPUT&quot; -s --template=template.html --standalone -o &quot;../posts/$OUTPUT&quot;</span></span></code></pre></div>
+          <p>New hierarchy is:</p>
+          <pre><code>.
+├── index.html
+├── css/
+│   └── blog.css
+├── images/
+│   └── profile.jpeg
+├── posts/
+│   └── my-blog-from-scratch.html
+└── articles/
+    └── my-blog-from-scratch.md</code></pre>
+          <p>That will do it for now. After putting in all this effort,
+          I’ll start thinking about a better way to automate the
+          process. I want to try another approach before jumping into
+          any kind of server code. While making these changes, I kept
+          hearing a voice in my head saying this was a waste of time and
+          that I should write just a PHP script to handle it. Maybe that
+          will be a future step, but for now I want to see how far I can
+          take this experiment.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="container">
+      <h4>ABOUT Juan Burciaga</h4>
+      <p>
+        <p>Hi, I’m Juan Burciaga. I work with software and also make
+small games on the side. Most of my time goes into building and fixing
+large systems, but I like sharing some of what I learn here. Sometimes
+it’s about coding, sometimes about games, or just things I’m trying
+out.</p>
+      </p>
+      <hr />
+    </footer>
+  </body>
+</html>

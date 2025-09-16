@@ -11,6 +11,20 @@ profile_bio:
 
 <article>
 <header>
+*September 15, 2025*
+**First Round of Automation**
+</header>
+
+I quickly realized how tedious it is to write HTML by hand. I
+had to be careful with the paragraph tags, escape characters,
+copy/paste all the common sections of the page, and create
+links between the index page and the post...
+
+[Read more](./posts/first-round-of-automation.html)
+
+</article>
+<article>
+<header>
 *September 12, 2025*
 **My Blog From Scratch**
 </header>

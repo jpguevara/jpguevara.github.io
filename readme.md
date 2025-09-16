@@ -41,3 +41,9 @@ build by running the command:
 ```
 
 move the generated file into the root.
+
+```bash
+pandoc index.md -s --template=index.html5 --standalone -o index.html 
+```
+
+that will generate the index.html
