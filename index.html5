@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="light dark" />
-    <title>Juan Burciaga</title>
+    <title>$title$</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,30 +21,17 @@
       <section class="profile">
         <header>
           <a href="./index.html">
-            <img src="./images/profile.jpeg" alt="Profile picture" />
-            <h1>Juan Burciaga</h1>
+            <img src="$profile_image$" alt="Profile picture" />
+            <h1>$author$</h1>
           </a>
         </header>
 
-        <p>Hi, I’m Juan Burciaga. I work with software and also make
-small games on the side. Most of my time goes into building and fixing
-large systems, but I like sharing some of what I learn here. Sometimes
-it’s about coding, sometimes about games, or just things I’m trying
-out.</p>
+        <p>$profile_bio$</p>
         <hr />
       </section>
 
       <section class="article-list">
-        <article>
-        <header>
-        <em>September 12, 2025</em> <strong>My Blog From
-        Scratch</strong>
-        </header>
-        <p>I decided to create a simple blog to start contributing to
-        the community with whatever knowledge I may have. Why make it
-        simple and code it myself? Two reasons:…</p>
-        <p><a href="./posts/my-blog-from-scratch.html">Read more</a></p>
-        </article>
+        $body$
       </section>
     </main>
   </body>
