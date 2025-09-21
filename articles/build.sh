@@ -18,6 +18,7 @@ fi
 BASENAME=$(basename "$INPUT" .md)
 OUTPUT="${BASENAME}.html"
 
-pandoc "$INPUT" -s --template=template.html --standalone -o "../posts/$OUTPUT"
+SCRIPT_DIR=$(dirname -- "$0")
+pandoc "$INPUT" -s --template="$SCRIPT_DIR/template.html" --standalone -o "posts/$OUTPUT"
 
 echo "Built $OUTPUT"
